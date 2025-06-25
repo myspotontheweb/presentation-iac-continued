@@ -282,7 +282,7 @@ Check what was created
 * [VPC console](https://eu-west-1.console.aws.amazon.com/vpcconsole/home?region=eu-west-1#vpcs:)
 * [EC2 console](https://eu-west-1.console.aws.amazon.com/ec2/home?region=eu-west-1#Instances:)
 
-## Use a Workspace to create another environment
+## Use a workspace to create another environment
 
 OpenTofu has a mechanism called [workspaces](https://opentofu.org/docs/cli/workspaces/) to support using the same code to create multiple 
 copies of the same infrastructure. 
