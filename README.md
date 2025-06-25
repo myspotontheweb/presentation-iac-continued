@@ -277,6 +277,43 @@ tofu plan
 tofu apply -auto-approve
 ```
 
+Check what was created
+
+* [VPC console](https://eu-west-1.console.aws.amazon.com/vpcconsole/home?region=eu-west-1#vpcs:)
+* [EC2 console](https://eu-west-1.console.aws.amazon.com/ec2/home?region=eu-west-1#Instances:)
+
+## Run the sample to create another environment
+
+OpenTofu has a mechanism called workspaces to support using the same code to create multiple infrastructure instances
+
+```bash
+#
+# Check for existing workspaces
+#
+tofu workspace list
+
+#
+# Create a new workspace
+#
+tofu workspace new demo2
+
+#
+# Observe how everything is to be created (New environment)
+#
+tofu plan
+
+#
+# Plan+Apply overriding the VPC name variable
+#
+tofu plan -var vpc_name="IAC demo2" 
+tofu plan -var vpc_name="IAC demo2" 
+```
+
+Check what was created
+
+* [VPC console](https://eu-west-1.console.aws.amazon.com/vpcconsole/home?region=eu-west-1#vpcs:)
+* [EC2 console](https://eu-west-1.console.aws.amazon.com/ec2/home?region=eu-west-1#Instances:)
+
 # Additional
 
 ## Variables and outputs
