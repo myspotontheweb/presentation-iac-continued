@@ -314,16 +314,14 @@ tofu plan -var vpc_name="IAC demo2"
 tofu plan -var vpc_name="IAC demo2" 
 ```
 
+**NOTE:**
+
+* The override variables could be passed as a file with a ```.tfvars``` or a ```.tfvars.json``` file extension
+
 Check what was created
 
 * [VPC console](https://eu-west-1.console.aws.amazon.com/vpcconsole/home?region=eu-west-1#vpcs:)
 * [EC2 console](https://eu-west-1.console.aws.amazon.com/ec2/home?region=eu-west-1#Instances:)
-
-# Additional
-
-## Variables and outputs
-## Code layout
-## Modules
 
 # Cleanup
 
