@@ -330,7 +330,20 @@ Check what was created
 Use [cloud-nuke](https://github.com/gruntwork-io/cloud-nuke) to purge cloud resources from the region
 
 ```bash
-cloud-nuke aws --region eu-west-1 --exclude-resource-type ec2-subnet --exclude-resource-type internet-gateway
+#
+# Purge all resources in one region (May have to run more than once)
+#
+cloud-nuke aws --region eu-west-1
+
+#
+# Purge the default VPC
+#
+cloud-nuke defaults-aws --region eu-west-1
+
+#
+# Recreate a default VPC
+#
+aws ec2 create-default-vpc --region eu-west-1
 ```
 
 **NOTE:**
