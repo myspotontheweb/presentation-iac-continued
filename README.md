@@ -193,14 +193,8 @@ Let's enable and S3 backend to our example as follows:
 
 ```
 terraform {
-  required_version = "= 1.9.1"
-  
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "5.98.0"
-    }
-  }
+  ..
+  ..
 
   backend "s3" {
     bucket  = "my-tf-test-bucket-backend-20233"
