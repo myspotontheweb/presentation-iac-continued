@@ -252,8 +252,14 @@ Explore the code
 
 * [modules/example/providers.tf](modules/example/providers.tf)
 * [modules/example/variables.tf](modules/example/variables.tf)
-* [modules/example/main.tf](modules/example/main.tf)
 * [modules/example/outputs.tf](modules/example/outputs.tf)
+* [modules/example/main.tf](modules/example/main.tf)
+
+**NOTES:**
+
+* You don't have to put all the resource declarations into the *main.tf* file. By convention this is merely the place to start looking.
+* The subnet resources (and some others) have a special [count parameter](https://github.com/myspotontheweb/presentation-iac-continued/blob/main/modules/example/main.tf#L20). This is example of [OpenTofu meta arguments](https://spacelift.io/blog/terraform-count). "count" is used to loop or create multiple resources. The weird syntax is designed to be data driven. In this case by how many Availability Zones are declared.
+* The [resources are tagged with "Name"](https://github.com/myspotontheweb/presentation-iac-continued/blob/main/modules/example/main.tf#L25-L27). This makes it easier to identify resources via the AWS UI
 
 ## Run the sample
 
