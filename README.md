@@ -1,6 +1,8 @@
-# presentation-iac-continued
+# Infrastructure As Code (IAC) part deux
 
- Infrastructure As Code (IAC) part deux
+This is a follow-on from the following presentation
+
+* [Introduction to cloud and Infrastructure As Code](https://github.com/myspotontheweb/presentation-cloud-iac-intro)
 
 ## Prerequisites
 
