@@ -82,7 +82,7 @@ With the following content
 ########################
 
 terraform {
-  required_version = "= 1.9.1"
+  required_version = ">= 1.10.0"
   
   required_providers {
     aws = {
