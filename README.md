@@ -201,6 +201,7 @@ terraform {
     key     = "state/terraform.tfstate"
     region  = "eu-west-1"
     encrypt = true
+    use_lockfile = true  # Enable native S3 locking
   }
 }
 ```
@@ -229,10 +230,6 @@ tofu apply -auto-approve
 Checkout the buckets via the UI
 
 * https://eu-west-1.console.aws.amazon.com/s3/buckets?region=eu-west-1&bucketType=general
-
-**NOTES:**
-
-* This example purposely ignores state locking. We're going to assume only one person is going to be running OpenTofu
 
 # Sample app walk-thru
 
