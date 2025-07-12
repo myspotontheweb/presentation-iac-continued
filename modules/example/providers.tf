@@ -13,6 +13,8 @@ terraform {
     key     = "state/terraform.tfstate"
     region  = "eu-west-1"
     encrypt = true
+    use_lockfile = true  # Enable native S3 locking
+  }
   }  
 }
 
